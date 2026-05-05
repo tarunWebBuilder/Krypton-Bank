@@ -1,65 +1,134 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-black text-white min-h-screen">
+      
+      {/* HERO */}
+      <section className="px-6 py-24 text-center">
+        <h1 className="text-5xl font-bold leading-tight">
+          The Private Credit Network <br />
+          <span className="text-gray-400">
+            for the World’s Top Talent
+          </span>
+        </h1>
+
+        <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+          A decentralized bank where elite borrowers access capital
+          and global lenders fund high-quality loans.
+        </p>
+
+        <div className="mt-8 flex justify-center gap-4">
+          <Button className="bg-white text-black hover:bg-gray-200">
+            Apply for Loan
+          </Button>
+          <Button variant="outline">
+            Fund Loans
+          </Button>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <h2 className="text-3xl font-semibold text-center">
+          How It Works
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
+          <div className="p-6 border border-gray-800 rounded-2xl">
+            <h3 className="text-xl font-semibold">1. Apply</h3>
+            <p className="text-gray-400 mt-2">
+              Verified high-potential individuals apply with academic
+              and professional credentials.
+            </p>
+          </div>
+
+          <div className="p-6 border border-gray-800 rounded-2xl">
+            <h3 className="text-xl font-semibold">2. Get Rated</h3>
+            <p className="text-gray-400 mt-2">
+              AI + on-chain scoring determines risk and loan terms.
+            </p>
+          </div>
+
+          <div className="p-6 border border-gray-800 rounded-2xl">
+            <h3 className="text-xl font-semibold">3. Get Funded</h3>
+            <p className="text-gray-400 mt-2">
+              Global lenders fund loans and earn yield transparently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* BORROWERS */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold">
+            Built for Exceptional Borrowers
+          </h2>
+
+          <p className="mt-4 text-gray-400">
+            Targeting top-tier students, founders, and professionals
+            from institutions like Ivy League and global equivalents.
           </p>
+
+          <Button className="mt-6 bg-white text-black">
+            Start Application
+          </Button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* LENDERS */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold">
+            Earn Yield on Human Potential
+          </h2>
+
+          <p className="mt-4 text-gray-400">
+            Fund curated borrowers with transparent risk scoring and
+            on-chain tracking.
+          </p>
+
+          <Button variant="outline" className="mt-6">
+            Start Funding
+          </Button>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* STATS */}
+      <section className="px-6 py-20 border-t border-gray-800">
+        <div className="grid md:grid-cols-3 text-center gap-8 max-w-4xl mx-auto">
+          <div>
+            <h3 className="text-3xl font-bold">$12M+</h3>
+            <p className="text-gray-400">Loans Funded</p>
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold">4.8%</h3>
+            <p className="text-gray-400">Default Rate</p>
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold">9.2%</h3>
+            <p className="text-gray-400">Avg. Yield</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="px-6 py-24 text-center border-t border-gray-800">
+        <h2 className="text-3xl font-semibold">
+          Join the Future of Credit
+        </h2>
+
+        <div className="mt-6 flex justify-center gap-4">
+          <Button className="bg-white text-black">
+            Apply Now
+          </Button>
+          <Button variant="outline">
+            Explore Loans
+          </Button>
+        </div>
+      </section>
+
+    </main>
   );
 }
